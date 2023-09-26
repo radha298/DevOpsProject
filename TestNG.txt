@@ -1,0 +1,18 @@
+TestNG XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke">
+
+</suite>
+
+
+static WebDriver driver;
+	@BeforeMethod
+	
+	public void beforemethod() 
+	{
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://login.salesforce.com/");
+	}
